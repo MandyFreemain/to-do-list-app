@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>ToDo List App</title>
+	<meta charset="utf-8">
+	<meta name="description" content="To-Do-List-App">
+	<meta name="author" content="Mandy">
+	<meta name=“viewport” content=“width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+
+<div class="to-do-list-container">
+
+	<div class="new-task">
+		<h4>Add item</h4>
+		<input id="new-task" class="add-item-text" type="text">
+		<button class="add-button">Add</button>
+	</div>
+
+	<h4>Todo</h4>
+	<ul id="incompleted-tasks">
+		<li>
+			<input type="checkbox">
+			<label class="list-text">Go shopping</label>
+			<button class="delete-btn">Delete</button>
+		</li>
+		<li>
+			<input type="checkbox">
+			<label class="list-text">Pay bills</label>
+			<button class="delete-btn">Delete</button>
+		</li>
+	</ul>
+
+	<h4>Completed</h4>
+	<ul id="completed-tasks">
+		<li>
+			<input type="checkbox" checked>
+			<label class="list-text">See the doctor</label>
+			<button class="delete-btn">Delete</button>
+		</li>
+	</ul>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

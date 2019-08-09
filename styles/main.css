@@ -1,0 +1,59 @@
+.to-do-list-container {
+  max-width: 400px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.add-button:hover {
+  color: #0fc57c;
+}
+
+.add-item-text {
+  font-size: 18px;
+  height: 40px;
+  width: 85%;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  background: #fff;
+  margin: 0;
+  color: #ddd;
+}
+
+.add-item-text:focus {
+  color: #333;
+}
+
+.new-task {
+  display: block;
+  color: #333;
+  font-size: 15px;
+  padding: 25px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.list-text {
+  font-size: 18px;
+  width: 250px;
+  padding: 0 0 0 15px;
+}
+
+.delete-btn:hover {
+  color: #cf2323;
+}
+
+#completed-tasks {
+  color: #888;
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 768px) {
+  .to-do-list-container {
+    width: 100%;
+  }
+}
