@@ -15,8 +15,8 @@ h4 {
   border-bottom: 2px solid #333;
   font-size: 15px;
   font-weight: bold;
-  margin-bottom: 20px;
   padding-bottom: 10px;
+  margin: 25px 0;
 }
 
 input, button {
@@ -27,6 +27,12 @@ li {
   overflow: hidden;
   border-bottom: 1px solid #eee;
   padding: 25px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li:first-child {
+  padding-top: 0;
 }
 
 ul {

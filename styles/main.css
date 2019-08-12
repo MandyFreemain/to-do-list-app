@@ -2,7 +2,7 @@
   max-width: 400px;
   position: absolute;
   margin: auto;
-  top: 0;
+  top: 50px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -15,7 +15,7 @@
 .add-item-text {
   font-size: 18px;
   height: 40px;
-  width: 85%;
+  width: 84%;
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #eee;
@@ -40,7 +40,6 @@
 .list-text {
   font-size: 18px;
   width: 250px;
-  padding: 0 0 0 15px;
 }
 
 .delete-btn:hover {
