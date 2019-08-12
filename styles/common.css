@@ -28,7 +28,7 @@ li {
   border-bottom: 1px solid #eee;
   padding: 25px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 li:first-child {
@@ -43,7 +43,6 @@ ul {
 
 button {
   font-size: 15px;
-  width: 50px;
   margin: 10px 0 0;
   background: none;
   border: 0;
