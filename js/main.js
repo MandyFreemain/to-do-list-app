@@ -1,45 +1,58 @@
+var taskInput = document.querySelector(".add-item-text");
+var addButton = document.querySelector(".add-button");
+var incompletedTasks = document.querySelector("#incompleted-tasks")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var menuButton = document.querySelector(".js-menu-control");
-var menu = document.querySelector(".menu");
-var menuCloseButton = document.querySelector(".menu-close");
-var allDatesButton = document.querySelector(".all-dates-button");
-var tourInnerAllDates = document.querySelector(".tour-inner-all-dates");
-
-function handleBurgerMenuClick () {
-  if (menu.classList.contains("menu-hidden")) {
-    menu.classList.remove("menu-hidden");
-  } else {
-    menu.classList.add("menu-hidden");
+var tasks = [
+  {
+    name: "Go shopping",
+    isCompleted: false
+  },
+  {
+    name: "Pay bills",
+    isCompleted: false
+  },
+  {
+    name: "See the doctor",
+    isCompleted: true
   }
+];
+
+function addTask (e) {
+  generateTaskData();
+  console.log("addTask")
+
 }
 
-function handleViewAllDatesClick () {
-  if (tourInnerAllDates.classList.contains("tour-inner-hidden")) {
-    tourInnerAllDates.classList.remove("tour-inner-hidden");
-  } else {
-    tourInnerAllDates.classList.add("tour-inner-hidden");
+function generateTaskData () {
+  var newTask = {
+    name: taskInput.value,
+    isCompleted: false
   }
+  tasks.push(newTask)
+  displayTaskData(taskInput.value)
+  console.log(tasks)
 }
 
-menuButton.addEventListener('click', handleBurgerMenuClick)
-menuCloseButton.addEventListener('click', handleBurgerMenuClick)
-allDatesButton.addEventListener('click', handleViewAllDatesClick)
+function displayTaskData (value) {
+  var listItem = document.createElement("li");
+  var checkBox = document.createElement("input");
+  var label = document.createElement("label");
+  var deleteButton = document.createElement("button");
+  label.innerText = value;
+  deleteButton.innerText = "delete";
+  checkBox.setAttribute("type", "checkbox");
+  listItem.appendChild(checkBox);
+  listItem.appendChild(label);
+  listItem.appendChild(deleteButton);
+
+  incompletedTasks.appendChild(listItem)
+}
+
+// taskInput.addEventListener('keyup', addTask);
+addButton.addEventListener('click', addTask);
+
+
+
 
 
 
