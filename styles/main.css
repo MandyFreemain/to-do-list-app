@@ -51,6 +51,14 @@
   text-decoration: line-through;
 }
 
+.card {
+  float: left;
+  margin: 20px;
+  height: 50px;
+  width: 50px;
+  background: yellow;
+}
+
 @media screen and (min-width: 768px) {
   .to-do-list-container {
     width: 100%;

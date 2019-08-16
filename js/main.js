@@ -1,6 +1,8 @@
 var taskInput = document.querySelector(".add-item-text");
 var addButton = document.querySelector(".add-button");
-var incompletedTasks = document.querySelector("#incompleted-tasks")
+var incompletedTasks = document.querySelector("#incompleted-tasks");
+var deleteTaskButton = document.querySelector(".delete-btn");
+var tasksIncompletedTasks = document.querySelector("#incompleted-tasks");
 
 var tasks = [
   {
@@ -18,9 +20,9 @@ var tasks = [
 ];
 
 function addTask (e) {
-  generateTaskData();
-  console.log("addTask")
-
+  if (e.type === 'click' || e.type === 'keyup' && e.keyCode === 13) {
+    generateTaskData();
+  }
 }
 
 function generateTaskData () {
@@ -48,8 +50,21 @@ function displayTaskData (value) {
   incompletedTasks.appendChild(listItem)
 }
 
-// taskInput.addEventListener('keyup', addTask);
+function deleteTask (card) {
+  // console.log(e)
+  // Check if target element is a delete button
+  if (card.target) {
+    console.log("This is delete button")
+    button.onclick = function() {
+      button.innerHTML = "Click me: " + count;
+    };
+
+  }
+}
+
+taskInput.addEventListener('keyup', addTask);
 addButton.addEventListener('click', addTask);
+tasksIncompletedTasks.addEventListener('click', deleteTask);
 
 
 
